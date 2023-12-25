@@ -16,3 +16,5 @@ This lab exercise showcases ways new security professionals can effectively anal
 
 
 <h2>Sample 1 </h2>
+
+Before we start analyzing the suspicious mail samples, I want to encourage you especially if you are new to this concept to view the various phishing indicators [here](https://github.com/custyblak/Phishing_MindMap/tree/main).
