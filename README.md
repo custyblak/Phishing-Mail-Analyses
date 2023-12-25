@@ -17,4 +17,13 @@ This lab exercise showcases ways new security professionals can effectively anal
 
 <h2>Sample 1 </h2>
 
-Before we start analyzing the suspicious mail samples, I want to encourage you especially if you are new to this concept to view the various phishing indicators [here](https://github.com/custyblak/Phishing_MindMap/tree/main).
+Before we delve into analyzing the intriguing mail samples, I want to encourage you—especially if you're new to this concept—to explore the diverse phishing indicators available [here](https://github.com/custyblak/Phishing_MindMap/tree/main). It's a valuable resource that will enhance your understanding as we navigate through this analysis."
+
+<p align="center">
+<img src="https://imgur.com/SJohW8K.png" height="100%" width="80%" alt="Phishing Sample 1"/> 
+<br />
+
+The sample mail pretends to be legitimate coming from Microsoft (sender's address). However, the content of the mail focuses on **cryto**, which is absurd and then the closure signature references a different domain (Binance.com)
+
+Lets explore other indicators(from the start of the mail):
+Spelling Errors: 
