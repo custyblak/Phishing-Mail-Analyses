@@ -37,7 +37,8 @@ Tools like PhishTool or MxToolbox can be used to effienctly analyze the header i
 
 Copy and paste the raw HTML header information into the **MxToolbox** mail header analyzer column and then click on "Analyze header". The result comprises of:
 
-- Email Authentication- SPF, DKIM & DMARC Compliance: From the output below, it is seen that the mail doesn't have any DKIM & DMARC records which adds to the suspicion. Because both are crucial in enhancing the security email communication, prevent phishing attacks, and build trust with both email service providers and recipients. 
+- Email Authentication- SPF, DKIM & DMARC Compliance: From the output below, it is seen that the mail doesn't have any DKIM & DMARC records which adds to the suspicion. Because both are crucial in enhancing the security email communication, prevent phishing attacks, and build trust with both email service providers and recipients.
+  
 <p align="center">
 <img src="https://imgur.com/xCxU89q.png" height="100%" width="80%"> 
 <br />
