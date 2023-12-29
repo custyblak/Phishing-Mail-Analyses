@@ -23,8 +23,12 @@ Before we delve into analyzing the intriguing mail samples, I want to encourage 
 <img src="https://imgur.com/SJohW8K.png" height="100%" width="80%" alt="Phishing Sample 1"/> 
 <br />
 
-The sample mail pretends to be legitimate coming from Microsoft (sender's address). However, the content of the mail focuses on **cryto**, which is absurd and then the closure signature references a different domain (Binance.com)
+The sample mail pretends to be legitimate coming from Microsoft (sender's address). However, the content of the mail focuses on **cryto**, which is absurd because the services rendered by Microsoft doesn't include Crytocurrent and then the closure signature references a different domain (Binance.com) and a [WHOIS](https://whois.domaintools.com) lookup on Binance.com, shows no relationship with Microsoft Corporation.
 
+<p align="center">
+<img src="https://imgur.com/4r7V2XN.png" height="100%" width="80%" alt="WHOIS INFO"/> 
+<br />
+  
 Lets explore other indicators (from the start of the mail):<br />
 - Multiple spelling errors observed (Inappropriate spacing within words)
 - Created a sense of urgency in "**...the first 2500 to apply...**", "**The airdrop will end on July 29, 2023, 18:00 UTC, with a limited supply...**" and "**...on a first come, first served basis...**"
@@ -47,9 +51,38 @@ Copy and paste the raw HTML header information into the **MxToolbox** mail heade
   <img src="https://imgur.com/OdH2b8e.png" height="100%" width="80%"> 
   <br />
 
-- Email Path: This shows all intermediary SMTP servers in-between the sender and destination mail addresses.
+- Email Path: This shows all intermediary SMTP servers inbetween the sender and receiver through which the mail was routed.
   <p align="center">
   <img src="https://imgur.com/uFwxD3q.png" height="100%" width="80%"> 
+  <br />
+- Other header information such as X-headers,
+  <p align="center">
+  <img src="https://imgur.com/aS3Xm2L.png" height="100%" width="80%"> 
+  <br />
+Similar information is also seen using **PhishTool**. However, the header information are splitted into sections- 
+- Headers: This contains the basis information of the mail such as sender's & receiver's addresses, Reply-to, Timestamp, Reply-path
+  <p align="center">
+  <img src="https://imgur.com/cCz0tO1.png" height="100%" width="80%"> 
+  <br />
+- Received Lines: This lists the different hops through which the mail got to the receiver.
+  <p align="center">
+  <img src="https://imgur.com/8rJIlv3.png" height="100%" width="80%"> 
+  <br />
+- X-Headers: 
+  <p align="center">
+  <img src="https://imgur.com/wGj89eU.png" height="100%" width="80%"> 
+  <br />
+- Security: This shows the authentication results of SPF, DKIM & DMARC.
+  <p align="center">
+  <img src="https://imgur.com/MlavY8O.png" height="100%" width="80%"> 
+  <br />
+- Attachment & Message URLs: This shows embedded attachment and links within the body of the mail.
+  <p align="center">
+  <img src="https://imgur.com/O5Sf10S.png" height="100%" width="80%"> 
+  <br />
+
+  <p align="center">
+  <img src="https://imgur.com/PH9ig4N.png" height="100%" width="80%"> 
   <br />
 On checking the raw format of the email, it was noticed that the body of the mail was encoded using base64 as shown below.
 
