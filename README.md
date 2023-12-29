@@ -23,14 +23,14 @@ Before we delve into analyzing the intriguing mail samples, I want to encourage 
 <img src="https://imgur.com/SJohW8K.png" height="100%" width="80%" alt="Phishing Sample 1"/> 
 <br />
 
-The sample mail pretends to be legitimate coming from Microsoft (sender's address). However, the content of the mail focuses on **cryto**, which is absurd because the services rendered by Microsoft doesn't include Crytocurrent and then the closure signature references a different domain (Binance.com) and a [WHOIS](https://whois.domaintools.com) lookup on Binance.com, shows no relationship with Microsoft Corporation.
+The sample mail pretends to be legitimate coming from Microsoft (sender's address). However, the content of the mail focuses on **cryto**, which is absurd because the services rendered by Microsoft doesn't include Crytocurrent and then the closure signature references a different domain (Binance.com) and the [WHOIS](https://whois.domaintools.com) lookup on Binance.com, shows Markmonitors Inc.
 
 <p align="center">
 <img src="https://imgur.com/4r7V2XN.png" height="100%" width="80%" alt="WHOIS INFO"/> 
 <br />
   
 Lets explore other indicators (from the start of the mail):<br />
-- Multiple spelling errors observed (Inappropriate spacing within words)
+- Multiple spelling errors (Inappropriate spacing within words)
 - Created a sense of urgency in "**...the first 2500 to apply...**", "**The airdrop will end on July 29, 2023, 18:00 UTC, with a limited supply...**" and "**...on a first come, first served basis...**"
 - Reward lure up to $80,000 mentioned to entice the user
 - The "Join Airdrop" button redirects to a different destination that is not related to either "Binance.com" or "Microsoft.com" when hovered over. This will be investigated later.
@@ -84,19 +84,22 @@ Similar information is also seen using **PhishTool**. However, the header inform
   <p align="center">
   <img src="https://imgur.com/PH9ig4N.png" height="100%" width="80%"> 
   <br />
-On checking the raw format of the email, it was noticed that the body of the mail was encoded using base64 as shown below.
+Let's analyze the embedded link.
+
+As seen above, using Phishtool shows any embedded link and that's one way to get URLs embedded in a mail. However, the other way is checking the raw format of the email. But in this sample, the body of the mail is encoded in base64 as shown below and **CyberChef** can be used to decode and unveil the concealed URL.
 
 <p align="center">
 <img src="https://imgur.com/8CXliYI.png" height="100%" width="80%"> 
 <br />
 
-Utilizing CyberChef, unveil concealed URLs within the email body by decoding it. The recommended approach involves inputting the raw HTML, encompassing both the email header and body. Apply the "Extract URLs" recipe to retrieve the embedded URLs. For this sample, given that the header wasn't encoded, we are focusing solely on the body by excluding the mail header.
+The recommended approach involves inputting the raw HTML, encompassing both the email header and body. Apply the "Extract URLs" recipe to retrieve the embedded URLs. For this sample, given that the header wasn't encoded, we are focusing solely on the body by excluding the mail header.
 
 Employing a sequence of recipes, namely "From Base64," "Regular expression (with URL built-in regex) selected," and "Extract URLs," the obscured URL was exposed. The revealed URL has been defanged for safety measures, appearing as hxxps[://]click[.]pstmrk[.]it/3s/sweedbuy[.]com%2Fblog%2F/ahc/k_CuAQ/AQ/44a54f89-410d-4729-b21c-32c30d6eb945/1/qOoKiS9V1s?/23687658rodrigofp.
 <p align="center">
 <img src="https://imgur.com/89e0qvi.png" height="100%" width="80%"> 
 <br />
 
-Utilizing urlscan.io
+Scan and analyze the suspicious URL in **URLScan.io** by 
 
 
+In conclusion, the sender tried to impersonate **Microsoft** to de
