@@ -35,11 +35,22 @@ Lets explore other indicators (from the start of the mail):<br />
 - Reward lure up to $80,000 mentioned to entice the user
 - The "Join Airdrop" button redirects to a different destination that is not related to either "Binance.com" or "Microsoft.com" when hovered over. This will be investigated later.
 
-Having seen the obvious indicators, let's analyze the header information.
+Having seen the obvious indicators, let's now analyze the header information.
 
-Tools like PhishTool or MxToolbox can be used to effienctly analyze the header information.
+First and foremost, check the raw HTML to see if the domains of the "From" and "Return-path" matches. For this sample mail, it does.
 
-Copy and paste the raw HTML header information into the **MxToolbox** mail header analyzer column and then click on "Analyze header". The result comprises of:
+<p align="center">
+<img src="https://imgur.com/77VfvV7.png" height="100%" width="80%" alt="FROM INFO"/> <img src="https://imgur.com/leopLXa.png" height="100%" width="80%" alt="RETURN-PATH INFO"/>
+<br />
+
+Now, tools like **PhishTool** or **MxToolbox** can further be used to effienctly analyze the header information.
+
+[MxToolbox](https://mxtoolbox.com/EmailHeaders.aspx): Goto mxtoolbox.com, click on "Analyze Headers" column, copy and paste the raw HTML header information into the space provided and then click on "Analyze header". See image below. 
+<p align="center">
+<img src="https://imgur.com/5xq1yh6.png" height="100%" width="80%" alt="WHOIS INFO"/> 
+<br />
+
+The Output comprises of:
 
 - Email Authentication- SPF, DKIM & DMARC Compliance: From the output below, it is seen that the mail doesn't have any DKIM & DMARC records which adds to the suspicion. Because both are crucial in enhancing the security email communication, prevent phishing attacks, and build trust with both email service providers and recipients.
   
@@ -86,20 +97,21 @@ Similar information is also seen using **PhishTool**. However, the header inform
   <br />
 Let's analyze the embedded link.
 
-As seen above, using Phishtool shows any embedded link and that's one way to get URLs embedded in a mail. However, the other way is checking the raw format of the email. But in this sample, the body of the mail is encoded in base64 as shown below and **CyberChef** can be used to decode and unveil the concealed URL.
+As seen above, Phishtool shows any link on the body of the mail and that's one way to get URLs embedded in a mail. However, the other way is by checking the raw HTML of the email. But in this sample, the body of the mail is encoded in base64 as shown below and **CyberChef** will be used to decode and unveil the concealed URL.
 
 <p align="center">
 <img src="https://imgur.com/8CXliYI.png" height="100%" width="80%"> 
 <br />
+  
+The recommended approach involves copying and pasting the raw HTML that encompasses both the email header and body into the input section of cyberchef, apply the "Extract URLs" recipe to retrieve the embedded URLs. But for this sample, given that the header wasn't encoded, we are focusing solely on the body by excluding the mail header. Just copy and paste the encoded body of the mail, employing a sequence of recipes, namely "From Base64," "Regular expression (with URL built-in regex) selected," and "Extract URLs," the obscured URL is exposed. 
+  
+**NB:** The revealed URL has been defanged for safety measures, appearing as hxxps[://]click[.]pstmrk[.]it/3s/sweedbuy[.]com%2Fblog%2F/ahc/k_CuAQ/AQ/44a54f89-410d-4729-b21c-32c30d6eb945/1/qOoKiS9V1s?/23687658rodrigofp.
 
-The recommended approach involves inputting the raw HTML, encompassing both the email header and body. Apply the "Extract URLs" recipe to retrieve the embedded URLs. For this sample, given that the header wasn't encoded, we are focusing solely on the body by excluding the mail header.
-
-Employing a sequence of recipes, namely "From Base64," "Regular expression (with URL built-in regex) selected," and "Extract URLs," the obscured URL was exposed. The revealed URL has been defanged for safety measures, appearing as hxxps[://]click[.]pstmrk[.]it/3s/sweedbuy[.]com%2Fblog%2F/ahc/k_CuAQ/AQ/44a54f89-410d-4729-b21c-32c30d6eb945/1/qOoKiS9V1s?/23687658rodrigofp.
 <p align="center">
 <img src="https://imgur.com/89e0qvi.png" height="100%" width="80%"> 
 <br />
 
-Scan and analyze the suspicious URL in **URLScan.io** by 
+Scan and analyze the suspicious URL in [**URLScan.io**](https://urlscan.io/) by 
 
 
 In conclusion, the sender tried to impersonate **Microsoft** to de
