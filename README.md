@@ -103,7 +103,7 @@ As seen above, Phishtool shows any link on the body of the mail and that's one w
 <img src="https://imgur.com/8CXliYI.png" height="100%" width="80%"> 
 <br />
   
-The recommended approach involves copying and pasting the raw HTML that encompasses both the email header and body into the input section of cyberchef, apply the "Extract URLs" recipe to retrieve the embedded URLs. But for this sample, given that the header wasn't encoded, we are focusing solely on the body by excluding the mail header. Just copy and paste the encoded body of the mail, employing a sequence of recipes, namely "From Base64," "Regular expression (with URL built-in regex) selected," and "Extract URLs," the obscured URL is exposed. 
+The recommended approach involves copying and pasting the raw HTML that encompasses both the email header and body into the input section of cyberchef, apply the "Extract URLs" recipe to retrieve the embedded URLs. But for this sample, given that the header isn't encoded, we are focusing solely on the body by excluding the mail header. Just copy and paste the encoded body of the mail, use a sequence of recipes namely "From Base64," "Regular expression (with URL built-in regex) selected," and "Extract URLs," the obscured URL is exposed. 
   
 **NB:** The revealed URL has been defanged for safety measures, appearing as hxxps[://]click[.]pstmrk[.]it/3s/sweedbuy[.]com%2Fblog%2F/ahc/k_CuAQ/AQ/44a54f89-410d-4729-b21c-32c30d6eb945/1/qOoKiS9V1s?/23687658rodrigofp.
 
@@ -111,7 +111,18 @@ The recommended approach involves copying and pasting the raw HTML that encompas
 <img src="https://imgur.com/89e0qvi.png" height="100%" width="80%"> 
 <br />
 
-Scan and analyze the suspicious URL in [**URLScan.io**](https://urlscan.io/) by 
+Scan and analyze the suspicious URL using [**URLScan.io**](https://urlscan.io/). The output shows that the main IP is 52.16.132.0, located in Dublin, Ireland and belongs to AMAZON-02, US. The screenshot on the right is blank and further checks on the "HTTP" button displays **Status 404** (Webpage Unavailable) and that it is linked to a text document (reference the Type/MIME-Type under the HTTP tab). Checks on [AbuseIPDB](https://www.abuseipdb.com/check/) for the main ip address shows no reported abuse.
+
+<p align="center">
+<img src="https://imgur.com/7oEEhoF.png" height="100%" width="80%"> <img src="https://imgur.com/8gAf4Nw.png" height="100%" width="80%"> <img src="https://imgur.com/vwuyrbq.png" height="100%" width="80%">
+<br />
+
+
+Under the **Indicators** tab, you will notice a hash value (e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855). Copy and paste it on [VirusTotal](https://www.virustotal.com/gui/file/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855/behavior).
+
+<p align="center">
+<img src="https://imgur.com/7oEEhoF.png" height="100%" width="80%"> <img src="https://imgur.com/8gAf4Nw.png" height="100%" width="80%">
+<br />
 
 
 In conclusion, the sender tried to impersonate **Microsoft** to de
