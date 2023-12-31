@@ -118,10 +118,16 @@ Scan and analyze the suspicious URL using [**URLScan.io**](https://urlscan.io/).
 <br />
 
 
-Under the **Indicators** tab, you will notice a hash value (e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855). Copy and paste it on [VirusTotal](https://www.virustotal.com/gui/file/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855/behavior).
+Under the **Indicators** tab, you will notice a hash value (e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855), copy and paste it on [VirusTotal](https://www.virustotal.com/gui/file/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855/behavior) search box and the result shows that the file is of 0 byte and zero detection. 
 
 <p align="center">
-<img src="https://imgur.com/7oEEhoF.png" height="100%" width="80%"> <img src="https://imgur.com/8gAf4Nw.png" height="100%" width="80%">
+<img src="https://imgur.com/ipQHnV9.png" height="100%" width="80%"> <img src="https://imgur.com/Pim5SY8.png" height="100%" width="80%">
+<br />
+  
+However, under the **behaviour** tab, it is observed that some sandbox identified multiple malicious activities upon scanning the file to which the hash value belongs to.
+
+<p align="center">
+<img src="https://imgur.com/ENqSMRb.png" height="100%" width="80%">
 <br />
 
 
