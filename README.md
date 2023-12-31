@@ -124,7 +124,7 @@ Under the **Indicators** tab, you will notice a hash value (e3b0c44298fc1c149afb
 <img src="https://imgur.com/ipQHnV9.png" height="100%" width="80%"> <img src="https://imgur.com/Pim5SY8.png" height="100%" width="80%">
 <br />
   
-However, under the **behaviour** tab, it is observed that some sandbox identified multiple malicious activities upon scanning the file to which the hash value belongs to.
+However, under the **behaviour** tab, it is observed that some sandbox identified multiple malicious activities upon scanning the file to which the hash value belongs to. So, let's use [Any.run]()
 
 <p align="center">
 <img src="https://imgur.com/ENqSMRb.png" height="100%" width="80%">
