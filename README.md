@@ -124,11 +124,25 @@ Under the **Indicators** tab, you will notice a hash value (e3b0c44298fc1c149afb
 <img src="https://imgur.com/ipQHnV9.png" height="100%" width="80%"> <img src="https://imgur.com/Pim5SY8.png" height="100%" width="80%">
 <br />
   
-However, under the **behaviour** tab, it is observed that some sandbox identified multiple malicious activities upon scanning the file to which the hash value belongs to. So, let's use [Any.run](https://app.any.run/tasks/b5b82219-8f4f-463b-98dd-39f7ba6cda4d)
+However, under the **behaviour** tab, it is observed that some sandbox identified multiple malicious activities upon scanning the file to which the hash value belongs to. So, let's use [Any.run](https://app.any.run/tasks/b5b82219-8f4f-463b-98dd-39f7ba6cda4d) to analyze the behaviour of the link.
 
 <p align="center">
 <img src="https://imgur.com/ENqSMRb.png" height="100%" width="80%">
 <br />
 
+Sign into Any.run, click on new task, input the URL into the URL column and select the browser you want to use.
 
-In conclusion, the sender tried to impersonate **Microsoft** to de
+<p align="center">
+<img src="https://imgur.com/VEkYBkV.png" height="100%" width="80%">
+<br />
+
+<p align="center">
+<img src="https://imgur.com/UtKDOyc.png" height="100%" width="80%">
+<br />
+
+From the screenshot above, it is seen that the site is unavailable. However on the backgroud, multiple Network connections, HTTP/ DNS requests and chrome processes were made.
+
+Furthermore, it is observed that all the HTTP requests were made to the "**edgedl.me.gvt1.com**" host. 
+
+How do we get the IP address of this domain? We can check DNS lookup using [MxToolbox](https://mxtoolbox.com/SuperTool.aspx?action=a%3aedgedl.me.gvt1.com&run=toolpage) or 
+
