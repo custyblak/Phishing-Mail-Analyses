@@ -142,7 +142,19 @@ Sign into Any.run, click on new task, input the URL into the URL column and sele
 
 From the screenshot above, it is seen that the site is unavailable. However on the backgroud, multiple Network connections, HTTP/ DNS requests and chrome processes were made.
 
-Furthermore, it is observed that all the HTTP requests were made to the "**edgedl.me.gvt1.com**" host. 
+Furthermore, it is observed that all the HTTP requests were made to the "**edgedl.me.gvt1.com**" domain. How do we get the IP address of this domain? 
 
-How do we get the IP address of this domain? We can check DNS lookup using [MxToolbox](https://mxtoolbox.com/SuperTool.aspx?action=a%3aedgedl.me.gvt1.com&run=toolpage) or 
+Search the DNS request tab using the domain name (edgedl.me.gvt1.com) or use the DNS lookup feature on [MxToolbox](https://mxtoolbox.com/SuperTool.aspx?action=a%3aedgedl.me.gvt1.com&run=toolpage) to get the IP address.
+
+<p align="center">
+<img src="https://imgur.com/p0hfHJh.png" height="100%" width="80%"> <img src="https://imgur.com/00GCrXW.png" height="100%" width="80%">
+<br />
+
+So, let's confirm the reputation of the host IP address on [VirusTotal](https://www.virustotal.com/gui/ip-address/34.104.35.123/detection) and [AbuseIPDB](https://www.abuseipdb.com/check/34.104.35.123)
+
+<p align="center">
+<img src="https://imgur.com/zY3gnyk.png" height="100%" width="80%"> <img src="https://imgur.com/r4VdFmi.png" height="100%" width="80%">
+<br />
+
+The result above shows that the domain IP has been reported several and also has been detected as malicious.
 
