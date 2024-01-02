@@ -23,7 +23,7 @@ Before we delve into analyzing the intriguing mail samples, I want to encourage 
 <img src="https://imgur.com/SJohW8K.png" height="100%" width="80%" alt="Phishing Sample 1"/> 
 <br />
 
-The sample mail pretends to be legitimate coming from Microsoft (sender's address). However, the content of the mail focuses on **cryto**, which is absurd because the services rendered by Microsoft doesn't include Crytocurrent and then the closure signature references a different domain (Binance.com) and the [WHOIS](https://whois.domaintools.com) lookup on Binance.com, shows Markmonitors Inc.
+The sample mail pretends to be legitimate coming from Microsoft (sender's address). However, the content of the mail focuses on **cryto**, which is absurd because the services rendered by Microsoft doesn't include crytocurrency. Also, the closure signature references a different domain (Binance.com) and a [WHOIS](https://whois.domaintools.com) lookup on Binance.com, shows organization as DNStination Inc.
 
 <p align="center">
 <img src="https://imgur.com/4r7V2XN.png" height="100%" width="80%" alt="WHOIS INFO"/> 
