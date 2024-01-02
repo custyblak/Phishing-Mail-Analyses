@@ -156,5 +156,11 @@ So, let's confirm the reputation of the host IP address on [VirusTotal](https://
 <img src="https://imgur.com/zY3gnyk.png" height="100%" width="80%"> <img src="https://imgur.com/r4VdFmi.png" height="100%" width="80%">
 <br />
 
-The result above shows that the domain IP has been reported several and also has been detected as malicious.
+From the results above, the domain's IP is waving a red flag, marked as malicious with multiple reports. Delving deeper into the network connection and DNS requests, reputation checks on most of the IPs there reveal they've got a record on AbuseIPDB. See snippet below.
+
+<p align="center">
+<img src="https://imgur.com/QoDx7DR.png" height="100%" width="80%"> <img src="https://imgur.com/ssnzdeT.png" height="100%" width="80%">
+<br />
+
+Finally, 
 
