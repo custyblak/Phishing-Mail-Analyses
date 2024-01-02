@@ -1,4 +1,4 @@
-![image](https://github.com/custyblak/Phishing-Mail-Analyses/assets/100330009/a1b4914d-8e36-4cb8-8283-424963a6ea2b)<h1> Phishing Mail Analyses </h1>
+<h1> Phishing Mail Analyses </h1>
 
 <h2>Description</h2>
 This lab exercise showcases ways new security professionals can effectively analyze suspicious mails. It also creates awareness for the general public on indicators/red flags to look out for on mails and maybe investigate further using the outlined methodology and tools.
