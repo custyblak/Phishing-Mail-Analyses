@@ -152,17 +152,17 @@ Search the DNS request tab using the domain name (edgedl.me.gvt1.com) or use the
 
 So, let's confirm the reputation of the host IP address on [VirusTotal](https://www.virustotal.com/gui/ip-address/34.104.35.123/detection) and [AbuseIPDB](https://www.abuseipdb.com/check/34.104.35.123)
 
-ccc
+
 From the results above, the domain's IP is waving a red flag, marked as malicious with multiple reports. Delving deeper into the network connection and DNS requests, reputation checks on most of the IPs there reveal they've got a record on AbuseIPDB. See snippet below.
 
 <p align="center">
-<img src="https://imgur.com/QoDx7DR.png" height="50%" width="50%"> <img src="https://imgur.com/ssnzdeT.png" height="50%" width="80%">
+<img src="https://imgur.com/QoDx7DR.png" height="50%" width="100%"> <img src="https://imgur.com/ssnzdeT.png" height="100%" width="80%">
 <br />
 
 As earlier observed from the Any.run snippets above, there are multiple spawn up processes of chrome.exe and in one of the processes, an executable (.exe) file was dropped into the C:\Users\admin\AppData\Local\Temp\ directory. See snippet below.
 
 <p align="center">
-<img src="https://imgur.com/wJdSriX.png" height="100%" width="80%"> <img src="https://imgur.com/J4fSWGC.png" height="100%" width="80%">
+<img src="https://imgur.com/wJdSriX.png" height="75%" width="80%"> <img src="https://imgur.com/J4fSWGC.png" height="100%" width="80%">
 <br />
 
 Confirming the reputation of the file on [VirusTotal](https://www.virustotal.com/gui/file/dd2a954ce7131c5dfb2577430808f6aa5d5a364d8e37c06ad0fcf68442388cc4/detection) using its hash value, showed that it was detected by some YARA rules and also flagged as Trogan by 2 Security Vendors.
