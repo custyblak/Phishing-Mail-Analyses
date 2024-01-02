@@ -156,7 +156,7 @@ So, let's confirm the reputation of the host IP address on [VirusTotal](https://
 From the results above, the domain's IP is waving a red flag, marked as malicious with multiple reports. Delving deeper into the network connection and DNS requests, reputation checks on most of the IPs there reveal they've got a record on AbuseIPDB. See snippet below.
 
 <p align="center">
-<img src="https://imgur.com/QoDx7DR.png" height="50%" width="100%"> <img src="https://imgur.com/ssnzdeT.png" height="100%" width="80%">
+<img src="https://imgur.com/QoDx7DR.png" height="100%" width="80%"> <img src="https://imgur.com/ssnzdeT.png" height="100%" width="80%">
 <br />
 
 As earlier observed from the Any.run snippets above, there are multiple spawn up processes of chrome.exe and in one of the processes, an executable (.exe) file was dropped into the C:\Users\admin\AppData\Local\Temp\ directory. See snippet below.
