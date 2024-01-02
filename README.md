@@ -162,7 +162,7 @@ From the results above, the domain's IP is waving a red flag, marked as maliciou
 As earlier observed from the Any.run snippets above, there are multiple spawn up processes of chrome.exe and in one of the processes, an executable (.exe) file was dropped into the C:\Users\admin\AppData\Local\Temp\ directory. See snippet below.
 
 <p align="center">
-<img src="https://imgur.com/wJdSriX.png" height="75%" width="80%"> <img src="https://imgur.com/J4fSWGC.png" height="100%" width="80%">
+<img src="https://imgur.com/wJdSriX.png" height="55%" width="80%"> <img src="https://imgur.com/J4fSWGC.png" height="100%" width="80%">
 <br />
 
 Confirming the reputation of the file on [VirusTotal](https://www.virustotal.com/gui/file/dd2a954ce7131c5dfb2577430808f6aa5d5a364d8e37c06ad0fcf68442388cc4/detection) using its hash value, showed that it was detected by some YARA rules and also flagged as Trogan by 2 Security Vendors.
