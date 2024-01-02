@@ -7,7 +7,7 @@ This lab exercise showcases ways new security professionals can effectively anal
 <h2>Objective</h2>
 - Spot the indicators within the body of the mail<br />
 - Identify and decode any hidden URL within the body of the mail<br />
-- Analyze the header information 
+- Analyze the mail and deduce if it is malicious or not.
 
 
 <h2>Tools used include:</h2>
@@ -171,4 +171,10 @@ Confirming the reputation of the file on [VirusTotal](https://www.virustotal.com
 <img src="https://imgur.com/qshy4I0.png" height="100%" width="80%"> <img src="https://imgur.com/09xprpg.png" height="100%" width="80%">
 <br />
 
-Also, [Hybrid-analyse](https://www.hybrid-analysis.com/sample/239bf419d29c335f028d26522da009ecd1c97abaa6b2316f8a32b904c4f2f32a/658d138b4057db6b780588c3) was used to analyze the link and it 
+Also, [Hybrid-analyse](https://www.hybrid-analysis.com/sample/239bf419d29c335f028d26522da009ecd1c97abaa6b2316f8a32b904c4f2f32a/658d138b4057db6b780588c3) was used to analyze the link and the result showed some malicious/suspicious behaviours which were mapped to few MITRE ATT&CK Techniques and Tactics etc. See snippet below.
+
+<p align="center">
+<img src="https://imgur.com/V0UKCe0.png" height="100%" width="80%"> <img src="https://imgur.com/24BTsSa.png" height="100%" width="80%"> <img src="https://imgur.com/PefYbts.png" height="100%" width="80%"> <img src="https://imgur.com/nlojZPQ.png" height="100%" width="80%">
+<br />
+
+Haven seen the multiple red flags, we can conclude that it is a phishing mail with malicious intent.
