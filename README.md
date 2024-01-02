@@ -26,7 +26,7 @@ Before we delve into analyzing the intriguing mail samples, I want to encourage 
 The sample mail pretends to be legitimate coming from Microsoft (sender's address). However, the content of the mail focuses on **crypto**, which is absurd because the services rendered by Microsoft doesn't include cryptocurrency. Also, the closure signature references a different domain (Binance.com) and a [WHOIS](https://whois.domaintools.com) lookup on Binance.com, shows organization as DNStination Inc.
 
 <p align="center">
-<img src="https://imgur.com/4r7V2XN.png" height="100%" width="80%" alt="WHOIS INFO"/> 
+<img src="https://imgur.com/TzGiIMj.png" height="100%" width="80%" alt="WHOIS INFO"/> 
 <br />
   
 Lets explore other indicators (from the start of the mail):<br />
